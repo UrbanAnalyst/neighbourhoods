@@ -57,7 +57,7 @@ cut_networks <- function (nbs, cut_index, dmax = 10000) {
         abs (geodist::geodist (xy, measure = "haversine") [1, 2] - dmax)
     }
 
-    op <- optimize (bb_dmax, c (0, 1), x0 = x0, y0 = y0, dmax = dmax)
+    op <- stats::optimize (bb_dmax, c (0, 1), x0 = x0, y0 = y0, dmax = dmax)
     bb <- data.frame (cbind (x = c (x0 - op$minimum, x0 + op$minimum),
                              y = c (y0 - op$minimum, y0 + op$minimum)))
 

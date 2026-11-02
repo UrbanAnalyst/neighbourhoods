@@ -52,7 +52,7 @@ convert_nbs_df <- function (dat) {
     vars <- c ("score", "d_in", "d_out", "centr_mn_in",
                "centr_mn_out", "area", "popdens",
                "effect_estimated")
-    dat <- na.omit (dat [, names (dat) %in% vars])
+    dat <- stats::na.omit (dat [, names (dat) %in% vars])
 
     return (dat)
 }
