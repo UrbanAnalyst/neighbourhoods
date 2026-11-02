@@ -1,4 +1,3 @@
-
 #' Score an LTN formed by blocking one street segment between two adjacent
 #' neighbourhoods.
 #'
@@ -35,11 +34,13 @@ ltn_train <- function (nbs, n = 100, dmax = 10000) {
 
     dat <- convert_nbs_df (dat)
 
-    model <- caret::train(score ~ d_in + d_out + centr_mn_in +
-                          centr_mn_out + area + popdens,
-               data = dat,
-               method = "rf",
-               trControl = caret::trainControl (method = "cv", number = 5))
+    model <- caret::train (
+        score ~ d_in + d_out + centr_mn_in +
+            centr_mn_out + area + popdens,
+        data = dat,
+        method = "rf",
+        trControl = caret::trainControl (method = "cv", number = 5)
+    )
 
     return (model)
 }
@@ -49,9 +50,11 @@ convert_nbs_df <- function (dat) {
     dat$area <- as.numeric (dat$area_from + dat$area_to)
     dat$popdens <- dat$popdens_from - dat$popdens_to
 
-    vars <- c ("score", "d_in", "d_out", "centr_mn_in",
-               "centr_mn_out", "area", "popdens",
-               "effect_estimated")
+    vars <- c (
+        "score", "d_in", "d_out", "centr_mn_in",
+        "centr_mn_out", "area", "popdens",
+        "effect_estimated"
+    )
     dat <- stats::na.omit (dat [, names (dat) %in% vars])
 
     return (dat)
