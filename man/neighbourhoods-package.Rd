@@ -3,7 +3,6 @@
 \docType{package}
 \name{neighbourhoods-package}
 \alias{neighbourhoods-package}
-\alias{_PACKAGE}
 \title{neighbourhoods: Efficient Identification of Neighbourhoods within Networks}
 \description{
 Algorithm for efficient identification of neighbourhoods within networks.
@@ -17,7 +16,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Mark Padgham \email{mark.padgham@email.com}
+\strong{Maintainer}: Mark Padgham \email{mark.padgham@email.com} (\href{https://orcid.org/0000-0003-2172-5265}{ORCID})
+
+Authors:
+\itemize{
+  \item Mark Padgham \email{mark.padgham@email.com} (\href{https://orcid.org/0000-0003-2172-5265}{ORCID})
+}
 
 }
 \keyword{internal}
