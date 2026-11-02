@@ -1,6 +1,6 @@
 Package: neighbourhoods
 Title: Efficient Identification of Neighbourhoods within Networks
-Version: 0.0.2.004
+Version: 0.0.2.005
 Authors@R: 
     person(given = "Mark",
            family = "Padgham",
@@ -21,14 +21,12 @@ Imports:
     dodgr,
     geodist,
     pbapply,
-    randomForest,
     raster,
     reproj,
     sf,
     stars
 Suggests: 
     dplyr,
-    geodist,
     testthat
 LinkingTo: 
     cpp11
