@@ -1,5 +1,4 @@
 RFILE = README
-VIGNETTE = flows
 
 all: help
 
@@ -8,15 +7,6 @@ doc: ## Update package documentation with `roxygen2`
 
 init: ## Initialize pkgdown site
 	echo "pkgdown::init_site()" | R --no-save -q
-
-pkgdown: ## Build entire pkgdown site
-	echo "pkgdown::build_site()" | R --no-save -q
-
-pkgdowncheck: ## Check 'pkgdown' site structure
-	echo "pkgdown::check_pkgdown()" | R --no-save -q
-
-vignette: ## Build pkgdown article
-	echo "pkgdown::build_article('$(VIGNETTE)',quiet=FALSE)" | R --no-save -q
 
 knith: $(RFILE).Rmd ## Render README as HTML
 	echo "rmarkdown::render('$(RFILE).Rmd',output_file='$(RFILE).html')" | R --no-save -q
@@ -38,9 +28,6 @@ test: ## Run test suite
 
 urls: ## Apply 'urlchecker::url_update()' to update all URLs
 	Rscript -e 'urlchecker::url_update()'
-
-data: ## Run 'data-raw/release-data-script' to (re-)generate release data
-	date; time Rscript "data-raw/release-data-script.R"
 
 clean: ## Clean all junk files, including all pkgdown docs
 	rm -rf *.html *.png README_cache docs/

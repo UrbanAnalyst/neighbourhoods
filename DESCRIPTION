@@ -1,6 +1,6 @@
 Package: neighbourhoods
 Title: Efficient Identification of Neighbourhoods within Networks
-Version: 0.0.2.009
+Version: 0.0.2.010
 Authors@R: 
     person(given = "Mark",
            family = "Padgham",
@@ -10,8 +10,8 @@ Authors@R:
 Description: Algorithm for efficient identification of neighbourhoods
     within networks.
 License: GPL-3
-URL: https://github.com/ATFutures-labs/neighbourhoods
-BugReports: https://github.com/ATFutures-labs/neighbourhoods/issues
+URL: https://github.com/UrbanAnalyst/neighbourhoods
+BugReports: https://github.com/UrbanAnalyst/neighbourhoods/issues
 Depends: 
     R (>= 4.1.0)
 Imports: 
@@ -30,8 +30,6 @@ Suggests:
     testthat
 LinkingTo: 
     cpp11
-Remotes:
-    ATFutures/dodgr
 Encoding: UTF-8
 LazyData: true
 Config/roxygen2/version: 8.1.1

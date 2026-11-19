@@ -10,8 +10,8 @@ Algorithm for efficient identification of neighbourhoods within networks.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ATFutures-labs/neighbourhoods}
-  \item Report bugs at \url{https://github.com/ATFutures-labs/neighbourhoods/issues}
+  \item \url{https://github.com/UrbanAnalyst/neighbourhoods}
+  \item Report bugs at \url{https://github.com/UrbanAnalyst/neighbourhoods/issues}
 }
 
 }
